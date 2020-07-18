@@ -30,17 +30,15 @@
  * @brief MQTT broker configuration
  */
 #define CLOUDBROKER //!< if defined the cloudbroker will be uses as configured below on a local machine we we assume its open
-    #define MQTT_BROKER_PORT 9883 
-    #define MQTT_BROKER_DOMAIN "tb.modelrailroad.ovh"
-    #define MQTT_BROKER_ADDRESS 51, 210, 151, 143
-    #define MQTT_BROKER_USER "arduino"
-    #define MQTT_BROKER_PASSWD "Dcc++EXCs"
-#ifdef CLOUDBROKER
 
+#ifdef CLOUDBROKER
+    #include <mqttConnect.h>
 #else
     #define MQTT_BROKER_PORT 1883
     #define MQTT_BROKER_DOMAIN "my.local.mac"
     #define MQTT_BROKER_ADDRESS 10, 0, 0, 2
+    #define MQTT_USER
+    #define MQTT_PASSWD
 #endif
 
 // Class for setting up the MQTT connection / topics / queues for processing commands and sendig back results

@@ -672,9 +672,17 @@ static void reconnect()
     INFO(F("Attempting MQTT Broker connection..."));
     // Attempt to connect
 #ifdef CLOUDBROKER
+    #ifdef MQTT_BROKER_USER
     if (mqttClient.connect(DccMQTT::getDeviceID(), MQTT_BROKER_USER, MQTT_BROKER_PASSWD))
-#else
+    #else
     if (mqttClient.connect(DccMQTT::getDeviceID()))
+    #endif
+#else
+    #ifdef MQTT_BROKER_USER
+    if (mqttClient.connect(DccMQTT::getDeviceID(), MQTT_BROKER_USER, MQTT_BROKER_PASSWD))
+    #else
+    if (mqttClient.connect(DccMQTT::getDeviceID()))
+    #endif
 #endif
     {
       INFO(F("MQTT broker connected ..."));

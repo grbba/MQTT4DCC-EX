@@ -20,18 +20,22 @@ You will not need any software from the DCC++EX repo or download from the websit
 
 Once having that sorted out you need to make some config modifications: 
 
-Fist edit DccMQTT.h and change according to your broker
+Fist edit DccMQTT.h and change/add according to your broker after the #ifdef CLOUDBROKER
 
-- #define MQTT_BROKER_PORT 1883 
-- #define MQTT_BROKER_DOMAIN "your mq tt broker on the web.xxx"  
-- #define MQTT_BROKER_ADDRESS "IP address of the  broker" 
+- #define MQTT_BROKER_PORT 1883                     // 1883 is the standard port for mqtt 
+- #define MQTT_BROKER_DOMAIN "your.mqttbroker.web"  
+- #define MQTT_BROKER_ADDRESS xx.xx.xx.xx           // IP address of the  broker" 
+
+If you have user/password authentication you have to specify as well :
+
 - #define MQTT_BROKER_USER "username"
 - #define MQTT_BROKER_PASSWD "password"
 
-At this point in time only the MQTT_BROKER_ADDRESS, PORT, USER and PASSWD is used. I assume that your borker requires username and password. If that is not the case have to change the line for the connection to the broker to the same as for a local install of MQTT without any user/passwd & acl setup.
+Otherwise do not define those/comment them out
 
-Any broker will do as long as it supports MQTT version 3 which most even public ones should support.
-Or depending if you defined CLOUDBROKER to 0 the second set with you local installation of e.g. mosquitto as broker
+At this point in time only the MQTT_BROKER_ADDRESS, PORT, USER and PASSWD is used. Any broker will do as long as it supports MQTT version 3 which most mqtt implemntations should support.
+
+By setting CLOUDBROKER to 0 the second set will be used looking for a local installation of a mqtt broker
 
 **Note**: The Arduino unique Id is used for building the topics to subscribe to. On any public broker without any user authentication this **ID would be visible**. User Authentication shall be added soon !
 
