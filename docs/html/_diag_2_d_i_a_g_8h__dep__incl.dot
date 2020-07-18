@@ -1,0 +1,21 @@
+digraph "mqtt4dcc++ex/src/Diag/DIAG.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="mqtt4dcc++ex/src/Diag\l/DIAG.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="mqtt4dcc++ex/src/CVReader\l/DCCEXParser.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_d_c_c_e_x_parser_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="mqtt4dcc++ex/src/DCCppEX\l_MQTT.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_d_c_cpp_e_x___m_q_t_t_8cpp.html",tooltip="Main entry point for the DCC++EX CommandStation MQTT interface. Derived from CVReader...."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="mqtt4dcc++ex/src/Diag\l/Telemetry/DccTelemetry.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_dcc_telemetry_8cpp.html",tooltip="Telemetry class allowing to report metrics to a specific MQTT topic for monitoring/debugging etc...."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="mqtt4dcc++ex/src/ETHNetwork\l/ETHNetwork.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_e_t_h_network_8cpp.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="mqtt4dcc++ex/src/Transport\l/MQTT/DccMQTT.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_dcc_m_q_t_t_8cpp.html",tooltip="MQTT protocol controller for DCC-EX. Sets up and maintains the connection to the MQTT broker incl set..."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="mqtt4dcc++ex/src/Transport\l/MQTT/DccMQTTCommandMsg.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_dcc_m_q_t_t_command_msg_8cpp.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="mqtt4dcc++ex/src/Transport\l/MQTT/DccMQTTProc.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_dcc_m_q_t_t_proc_8cpp.html",tooltip="Eexecuting DCC commands recieved through via MQTT. This class relies on the DCC API from the CVReader..."];
+}

@@ -1,0 +1,5 @@
+<map id="mqtt4dcc++ex/src/Diag/Telemetry/DccTelemetry.h" name="mqtt4dcc++ex/src/Diag/Telemetry/DccTelemetry.h">
+<area shape="rect" id="node1" title=" " alt="" coords="119,5,296,47"/>
+<area shape="rect" id="node2" href="$_dcc_telemetry_8cpp.html" title="Telemetry class allowing to report metrics to a specific MQTT topic for monitoring/debugging etc...." alt="" coords="5,95,196,136"/>
+<area shape="rect" id="node3" href="$_dcc_m_q_t_t_8cpp.html" title="MQTT protocol controller for DCC&#45;EX. Sets up and maintains the connection to the MQTT broker incl set..." alt="" coords="221,95,407,136"/>
+</map>

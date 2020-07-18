@@ -1,0 +1,9 @@
+<map id="mqtt4dcc++ex/src/Transport/MQTT/DccMQTTCommandMsg.h" name="mqtt4dcc++ex/src/Transport/MQTT/DccMQTTCommandMsg.h">
+<area shape="rect" id="node1" title=" " alt="" coords="375,5,599,47"/>
+<area shape="rect" id="node2" href="$_dcc_m_q_t_t_8cpp.html" title="MQTT protocol controller for DCC&#45;EX. Sets up and maintains the connection to the MQTT broker incl set..." alt="" coords="5,184,192,225"/>
+<area shape="rect" id="node3" href="$_dcc_m_q_t_t_8h.html" title="MQTT protocol controller for DCC&#45;EX. Sets up and maintains the connection to the MQTT broker incl set..." alt="" coords="328,95,515,136"/>
+<area shape="rect" id="node6" href="$_dcc_m_q_t_t_proc_8cpp.html" title="Eexecuting DCC commands recieved through via MQTT. This class relies on the DCC API from the CVReader..." alt="" coords="651,184,837,225"/>
+<area shape="rect" id="node7" href="$_dcc_m_q_t_t_command_msg_8cpp.html" title=" " alt="" coords="590,95,829,136"/>
+<area shape="rect" id="node4" href="$_d_c_cpp_e_x___m_q_t_t_8cpp.html" title="Main entry point for the DCC++EX CommandStation MQTT interface. Derived from CVReader...." alt="" coords="216,184,411,225"/>
+<area shape="rect" id="node5" href="$_dcc_telemetry_8cpp.html" title="Telemetry class allowing to report metrics to a specific MQTT topic for monitoring/debugging etc...." alt="" coords="435,184,626,225"/>
+</map>
