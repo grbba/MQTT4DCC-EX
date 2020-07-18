@@ -32,6 +32,7 @@
 #define CLOUDBROKER //!< if defined the cloudbroker will be uses as configured below on a local machine we we assume its open
 
 #ifdef CLOUDBROKER
+    // Create/edit the following file with the information from README or edit them directly in here
     #include <mqttConnect.h>
 #else
     #define MQTT_BROKER_PORT 1883
