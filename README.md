@@ -24,7 +24,7 @@ Fist edit DccMQTT.h and change/add according to your broker after the #ifdef CLO
 
 - #define MQTT_BROKER_PORT 1883                     // 1883 is the standard port for mqtt 
 - #define MQTT_BROKER_DOMAIN "your.mqttbroker.web"  
-- #define MQTT_BROKER_ADDRESS xx.xx.xx.xx           // IP address of the  broker" 
+- #define MQTT_BROKER_ADDRESS xx, xx, xx, xx           // IP address of the  broker" 
 
 If you have user/password authentication you have to specify as well :
 

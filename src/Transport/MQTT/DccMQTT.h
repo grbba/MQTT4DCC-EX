@@ -33,7 +33,7 @@
 
 #ifdef CLOUDBROKER
     // Create/edit the following file with the information from README or edit them directly in here
-    #include <mqttConnect.h>
+    #include <Transport/MQTT/mqttConnect.h>
 #else
     #define MQTT_BROKER_PORT 1883
     #define MQTT_BROKER_DOMAIN "my.local.mac"
