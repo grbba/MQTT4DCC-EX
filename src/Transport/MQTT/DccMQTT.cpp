@@ -141,7 +141,6 @@ DccTopics resolveTopics(const char *c)
       return INVALID_T;
     }
   }
-  DBG(F("Resolved Topic: %s"), c);
   return (DccTopics)i;
 }
 
@@ -243,7 +242,10 @@ void mqttCallback(char *topic, byte *payload, unsigned int length)
     mqttDccExParser.parse(Serial, (const byte *)topicMessage, 0); // send the message to the DCC parser for handling and return;
     return;
   }
-  case ADMIN:
+  case ADMIN: {
+    INFO(F("Admin Message arrived [%s]: %s"), topicName, topicMessage);
+    return;
+  }
   case TELEMETRY:
   case RESULT:
   case DIAGNOSTIC:
