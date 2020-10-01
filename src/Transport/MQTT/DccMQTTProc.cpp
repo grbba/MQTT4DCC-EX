@@ -165,6 +165,7 @@ void DccMQTTProc::loop()
             switch (DccMQTTCommandMsg::msg[midx].params[TRACK])
             {
             case 'A':
+                DBG(F("Power ALL : %d"), DccMQTTCommandMsg::msg[midx].params[STATE]);
                 DCCWaveform::mainTrack.setPowerMode(
                     (POWERMODE)DccMQTTCommandMsg::msg[midx].params[STATE]
                 );
@@ -173,11 +174,13 @@ void DccMQTTProc::loop()
                 );
                 break;
             case 'M':
+                DBG(F("Power MAIN : %d"), DccMQTTCommandMsg::msg[midx].params[STATE]);
                 DCCWaveform::mainTrack.setPowerMode(
                     (POWERMODE)DccMQTTCommandMsg::msg[midx].params[STATE]
                 );
                 break;
             case 'P':
+                DBG(F("Power PROG : %d"), DccMQTTCommandMsg::msg[midx].params[STATE]);
                 DCCWaveform::progTrack.setPowerMode(
                     (POWERMODE)DccMQTTCommandMsg::msg[midx].params[STATE]
                 );
@@ -188,6 +191,10 @@ void DccMQTTProc::loop()
         }
         case THROTTLE:
         {
+            DBG(F("Throttle: %d %d %d "), DccMQTTCommandMsg::msg[midx].params[LCOCMOTIVE],
+                DccMQTTCommandMsg::msg[midx].params[SPEED],
+                (bool)DccMQTTCommandMsg::msg[midx].params[DIRECTION]);
+
             DCC::setThrottle(
                 DccMQTTCommandMsg::msg[midx].params[LCOCMOTIVE],
                 DccMQTTCommandMsg::msg[midx].params[SPEED],
@@ -198,6 +205,9 @@ void DccMQTTProc::loop()
         }
         case FUNCTION:
         {
+            DBG(F("Function: %d %d %d "),DccMQTTCommandMsg::msg[midx].params[LCOCMOTIVE],
+                DccMQTTCommandMsg::msg[midx].params[FN],
+                DccMQTTCommandMsg::msg[midx].params[STATE]);
             DCC::setFn(
                 DccMQTTCommandMsg::msg[midx].params[LCOCMOTIVE],
                 DccMQTTCommandMsg::msg[midx].params[FN],

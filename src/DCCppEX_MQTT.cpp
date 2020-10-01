@@ -28,6 +28,7 @@
 #include <Diag/DIAG.h>
 #include <DCCEXParser.h>
 #include <WifiInterface.h>
+#include <MotorDrivers.h>
 
 #define DCCMQTT //<! comment this line in order to compile only CVReader without any MQTT support
 
@@ -74,7 +75,7 @@ void setup()
   INFO(F("Setup started ...")); // Connect to the Network
   Serial.begin(115200); // Responsibility 1: Start the usb connection for diagnostics and possible JMRI input
   INFO(F("Serial is up ..."));
-  DCC::begin();         // Responsibility 2: Start the DCC engine.
+  DCC::begin(STANDARD_MOTOR_SHIELD);         // Responsibility 2: Start the DCC engine.
   INFO(F("DCC engine running ..."));
 
 #ifdef DCCMQTT

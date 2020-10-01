@@ -6,3 +6,4 @@
 docs/latex
 docs/Doxyfile
 src/Transport/MQTT/mqttConnect.h
+src/CVReader

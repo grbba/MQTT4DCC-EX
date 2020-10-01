@@ -42,6 +42,12 @@ enum Tracks
   PROG = 'P'
 };
 
+enum States
+{
+  OFF,
+  ON
+};
+
 #define MAXCID 24 // maximum length of a correlation id
 
 // max length of the message pool; balance to be found in order to avoid too many cycles where the pool is full

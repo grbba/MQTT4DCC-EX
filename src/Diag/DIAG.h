@@ -46,17 +46,17 @@
         #define DBG( message... ) ; 
         #define ERR( message... ) ;  
     #endif
-    #if LOGLEVEL < LOGV_INFO && LOGLEVEL > 0
+    #if LOGLEVEL > 0 && LOGLEVEL < LOGV_INFO
         #define INFO( message... ) { DIAG(F("::[INFO]:%d:%s:%d : "), freeMemory(), __FILE__, __LINE__); DIAG( message ); Serial.println(); }   
         #define DBG( message... ) ; 
         #define ERR( message... ) ; 
     #endif
-    #if LOGLEVEL < LOGV_ERROR && LOGLEVEL > LOGV_INFO
+    #if LOGLEVEL > LOGV_INFO && LOGLEVEL < LOGV_ERROR
         #define INFO( message... ) { DIAG(F("::[INFO]:%d:%s:%d : "),freeMemory(), __FILE__, __LINE__); DIAG( message ); Serial.println(); }   
         #define DBG( message... ) ; 
         #define ERR( message... ) { DIAG(F("::[ERROR]:%d:%s:%d : "), freeMemory(), __FILE__, __LINE__); DIAG( message ); Serial.println(); }  
     #endif
-     #if LOGLEVEL < LOGV_DEBUG && LOGLEVEL > LOGV_ERROR
+     #if LOGLEVEL > LOGV_ERROR
         #define INFO( message... ) { DIAG(F("::[INFO]:%d:%s:%d : "), freeMemory(), __FILE__, __LINE__); DIAG( message ); Serial.println(); }   
         #define DBG( message... )  { DIAG(F("::[DBG]:%d:%s:%d : "), freeMemory(), __FILE__, __LINE__); DIAG( message ); Serial.println(); }
         #define ERR( message... ) { DIAG(F("::[ERROR]:%d:%s:%d : "), freeMemory(), __FILE__, __LINE__); DIAG( message ); Serial.println(); }  
